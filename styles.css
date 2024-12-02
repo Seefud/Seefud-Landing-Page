@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+    font-family: "Inter", sans-serif;
+    color: #4D4D4D;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sticky-header {
+    position: sticky;
+    top: 0;  
+    z-index: 1000; 
+    width: 100%;  
+    background-color: #28a745;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 10px 0 10px;
+  }
+
+  nav a {
+    margin: 0 10px 0 10px;
+  }
+
+  nav a:last-child {
+    margin-right: 0;
+  }
+
+  .close-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+  }
+
+  .logo .logo-image {
+    width: 200px;
+    height: auto;
+    max-width: 100%;
+  }
+  
+  .hero h1 {
+    margin-bottom: 20px;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    width: 600px;
+    height: auto;
+  }
+
+  .feature-image {
+    max-width: 100%;
+    width: 600px;
+    height: auto;
+  }
+  
+  .about-image {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28A745;
+  }
+  
+  .card-img-top {
+    max-width: 100%;
+    width: 100px;
+    height: auto;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+
+  .highlight-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .testimonial {
+    font-style: italic;
+  }
+
+  .testimonial-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .card-img-blog {
+    max-width: 100%;
+    width: 600px;
+    height: auto;
+  }
+
+  footer .logo span {
+    color: #4CAF50;
+  }
+
+  footer .logo-footer-image {
+    width: 200px;
+    height: auto;
+    max-width: 100%;
+  }
+  
+  footer nav a {
+    font-size: 14px;
+  }
+
+  /* Responsive Styles for Navbar */
+  @media (max-width: 765px) {
+      nav {
+        flex-direction: column; /* Tumpuk menu secara vertikal */
+        background-color: #28a745; /* Warna hijau sesuai tema */
+        padding: 1rem;
+        position: fixed; /* Navbar tetap di atas */
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999; /* Pastikan di atas elemen lain */
+        transform: translateY(-100%); /* Tersembunyi secara default */
+        transition: transform 0.3s ease-in-out;
+      }
+
+      /* Tampilkan navbar jika aktif */
+      nav.active {
+        transform: translateY(0);
+      }
+
+      /* Tombol hamburger */
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+      }
+
+      .hamburger div {
+        background-color: #fff;
+        height: 3px;
+        border-radius: 2px;
+      }
+
+      .navbar-links {
+        display: none;
+      }
+
+      .navbar-links.active {
+        display: block;
+      }
+
+      .close-icon {
+        display: none; 
+      }
+    
+      nav.active + .close-icon {
+        display: block; 
+      }
+    
+      .hamburger {
+        display: flex;
+      }
+    
+      nav.active ~ .hamburger {
+        display: none; 
+      }
+    }
